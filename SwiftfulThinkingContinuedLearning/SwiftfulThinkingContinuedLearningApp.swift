@@ -9,9 +9,24 @@ import SwiftUI
 
 @main
 struct SwiftfulThinkingContinuedLearningApp: App {
+    
+    @AppStorage("count") var count: Int = 0
+    
+    init() {
+        count = 0
+    }
+    
     var body: some Scene {
         WindowGroup {
-            CoreDataMVVMExample()
+//            WeakSelfBootcamp()
+//                .overlay(alignment: .topTrailing) {
+//                    Text("\(count)")
+//                        .padding()
+//                        .background(.green)
+//                        .padding()
+//                }
+            
+            JSONApiCodeableBootcamp()
         }
     }
 }
