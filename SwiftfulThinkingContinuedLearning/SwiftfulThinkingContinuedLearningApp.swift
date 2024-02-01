@@ -26,7 +26,7 @@ struct SwiftfulThinkingContinuedLearningApp: App {
 //                        .padding()
 //                }
             
-            JSONApiCodeableBootcamp()
+            SubscriberBootcamp()
         }
     }
 }
