@@ -8,20 +8,60 @@
 import SwiftUI
 
 
-class CacheManagerViewModel: ObservableObject {
-    
-    let fm = LocalFileManager.instance
-    
-    @Published var image: UIImage?
+class CacheManager {
+    static let instance = CacheManager()
     
     init() {
+        
+    }
+    
+    var imageCache: NSCache<NSString, UIImage> =  {
+        var cache = NSCache<NSString, UIImage>()
+        cache.countLimit = 100
+        cache.totalCostLimit = 1024 * 1024 * 100 // 100 mb
+        return cache
+    }()
+    
+    func add(image: UIImage, name: String) {
+        imageCache.setObject(image, forKey: NSString(string: name))
+        print("Success add image to cache")
+    }
+    
+    func delete(name: String) {
+        imageCache.removeObject(forKey: NSString(string: name))
+        print("Success delete image from cache")
+    }
+    
+    func get(name: String) -> UIImage? {
+        print("Success get image from cache")
+       return imageCache.object(forKey: NSString(string: name))
+    }
+}
+
+class CacheManagerViewModel: ObservableObject {
+    
+    let fm = CacheManager.instance
+    
+    @Published var image: UIImage?
+    @Published var cachedImage: UIImage?
+    init() {
         image = .twice
+        getImageCache()
     }
     
     func saveImage() {
         guard let image else { return }
-        fm.saveImage(image: image, name: image.description)
+        fm.add(image: image, name: "twice-img")
     }
+    
+    func deleteImage() {
+        fm.delete(name: "twice-img")
+    }
+    
+    func getImageCache() {
+        cachedImage = fm.get(name: "twice-img")
+    }
+    
 }
 
 struct CacheImageBootcamp: View {
@@ -51,7 +91,7 @@ struct CacheImageBootcamp: View {
                     )
                     .clipShape(.rect(cornerRadius: 12))
                     Button("Delete from cache") {
-                        vm.saveImage()
+                        vm.deleteImage()
                     }
                     .tint(.white)
                     .padding(.all)
@@ -60,7 +100,24 @@ struct CacheImageBootcamp: View {
                     )
                     .clipShape(.rect(cornerRadius: 12))
                 }
+                Button("Get from cache") {
+                    vm.getImageCache()
+                }
+                .tint(.white)
+                .padding(.all)
+                .background(
+                    Color.green
+                )
+                .clipShape(.rect(cornerRadius: 12))
                 
+                if let image = vm.cachedImage {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 250, height: 250)
+                        .clipped()
+                        .clipShape(.rect(cornerRadius: 12))
+                }
                 Spacer()
                
             }

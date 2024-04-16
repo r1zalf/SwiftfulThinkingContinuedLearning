@@ -28,6 +28,8 @@
 		C4705B062B662CF10015C7DC /* LocalNotificationsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4705B052B662CF10015C7DC /* LocalNotificationsBootcamp.swift */; };
 		C4705B082B6640B50015C7DC /* HashableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4705B072B6640B50015C7DC /* HashableBootcamp.swift */; };
 		C482CB3D2B67D60400634C0B /* CombineBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C482CB3C2B67D60400634C0B /* CombineBootcamp.swift */; };
+		C48D307F2BCE5FF800E4C137 /* FileManagerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D307E2BCE5FF800E4C137 /* FileManagerBootcamp.swift */; };
+		C48D30812BCE600300E4C137 /* CacheImageBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D30802BCE600300E4C137 /* CacheImageBootcamp.swift */; };
 		C492FA272B6753CC0049F47B /* BackgroundThreadBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FA262B6753CC0049F47B /* BackgroundThreadBootcamp.swift */; };
 		C492FA2B2B6757420049F47B /* WeakSelfBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FA2A2B6757420049F47B /* WeakSelfBootcamp.swift */; };
 		C4C9FC5C2B65F02C009CE3D1 /* DragBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C9FC5B2B65F02C009CE3D1 /* DragBootcamp.swift */; };
@@ -60,6 +62,8 @@
 		C4705B052B662CF10015C7DC /* LocalNotificationsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsBootcamp.swift; sourceTree = "<group>"; };
 		C4705B072B6640B50015C7DC /* HashableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableBootcamp.swift; sourceTree = "<group>"; };
 		C482CB3C2B67D60400634C0B /* CombineBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineBootcamp.swift; sourceTree = "<group>"; };
+		C48D307E2BCE5FF800E4C137 /* FileManagerBootcamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerBootcamp.swift; sourceTree = "<group>"; };
+		C48D30802BCE600300E4C137 /* CacheImageBootcamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheImageBootcamp.swift; sourceTree = "<group>"; };
 		C492FA262B6753CC0049F47B /* BackgroundThreadBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThreadBootcamp.swift; sourceTree = "<group>"; };
 		C492FA2A2B6757420049F47B /* WeakSelfBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakSelfBootcamp.swift; sourceTree = "<group>"; };
 		C4C9FC5B2B65F02C009CE3D1 /* DragBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragBootcamp.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				C482CB3C2B67D60400634C0B /* CombineBootcamp.swift */,
 				C43394452B682A8D00324692 /* TimerBootcamp.swift */,
 				C415A1792B6886F900164FE0 /* SubscriberBootcamp.swift */,
+				C48D307E2BCE5FF800E4C137 /* FileManagerBootcamp.swift */,
+				C48D30802BCE600300E4C137 /* CacheImageBootcamp.swift */,
 				C4705AFC2B6609210015C7DC /* Sounds */,
 				C40794AA2B6150EE00CE9734 /* Assets.xcassets */,
 				C40794AC2B6150EE00CE9734 /* Preview Content */,
@@ -232,9 +238,11 @@
 				C4C9FC602B65F0EF009CE3D1 /* ScrollViewReaderBootcamp.swift in Sources */,
 				C40794A72B6150ED00CE9734 /* SwiftfulThinkingContinuedLearningApp.swift in Sources */,
 				C452C8E32B669D33008E528D /* FruitModel.xcdatamodeld in Sources */,
+				C48D30812BCE600300E4C137 /* CacheImageBootcamp.swift in Sources */,
 				C4705B022B6609C30015C7DC /* SoundEffectsBootcamp.swift in Sources */,
 				C4705B042B662A380015C7DC /* HapticsVibrationsBootcamp.swift in Sources */,
 				C4705AFB2B65F1EC0015C7DC /* MaskBootcamp.swift in Sources */,
+				C48D307F2BCE5FF800E4C137 /* FileManagerBootcamp.swift in Sources */,
 				C4705B062B662CF10015C7DC /* LocalNotificationsBootcamp.swift in Sources */,
 				C4C9FC5E2B65F0BF009CE3D1 /* RotationGestureBootcamp.swift in Sources */,
 				C482CB3D2B67D60400634C0B /* CombineBootcamp.swift in Sources */,
